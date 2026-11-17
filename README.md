@@ -52,7 +52,7 @@ Centipawn loss is set to 0 for the 444 moves that matched the engine's first cho
 Three observations, stated carefully:
 
 1. **In this pair and this series, the model that produced more output also played better.** GPT produced about 74% more output tokens (by each provider's own count) and had the lower centipawn loss in 10 of the 11 games. With only two models this cannot be generalised: GPT may simply be the stronger player here and, separately, the more verbose one.
-2. **Within each model, it is the other way round.** The moves each model spent most tokens on were, on average, its worse ones. Rank correlation between tokens and centipawn loss: +0.40 for Claude (95% interval +0.32 to +0.48) and +0.31 for GPT (+0.21 to +0.40). **This is an association, not a cause: it is not evidence that thinking more makes a model play worse.** A plausible reading is that the models spend more where the position is hard, and hard positions produce more errors. This data cannot separate that from other explanations.
+2. **Within each model, the longest answers went with the worse moves.** The moves each model spent most tokens on were, on average, its worse ones. Rank correlation between tokens and centipawn loss: +0.40 for Claude (95% interval +0.32 to +0.48) and +0.31 for GPT (+0.21 to +0.40). **This is an association, not a cause: it is not evidence that thinking more makes a model play worse.** A plausible reading is that the models spend more where the position is hard, and hard positions produce more errors. This data cannot separate that from other explanations.
 3. **That within-model link comes mostly from one-sided positions.** It holds without the opening moves, but shrinks to +0.10 (Claude) and +0.22 (GPT) when only roughly balanced positions (within 2 pawns) are kept. Those are only about a fifth of the non-opening moves, because most games became one-sided early. Evidence that the models spend more on genuinely contested positions is weak.
 
 Other explanations this data cannot rule out: a model in a lost position may simply write more; the extra output may be justification after the choice rather than useful reasoning; and one model may be more verbose at the same setting regardless of move quality.
@@ -102,7 +102,7 @@ Engine results can differ slightly between machines and thread counts.
 
 ### Move quality classes
 
-Centipawn loss (CPL) is the engine evaluation before the move minus the evaluation after it, from the mover's side, never below zero. When the move played is the engine's first choice, CPL is set to 0: any difference there is search noise between two evaluations, not a loss by the player (the unadjusted value is kept in the `cpl_raw` column; this applies to 65 moves in the series). Best: CPL up to 10. Good: up to 50. Inaccuracy: up to 100. Mistake: up to 300. Blunder: above 300. Opening: the first 20 half-moves. Endgame: 12 pieces or fewer.
+Centipawn loss (CPL) is the engine evaluation before the move minus the evaluation after it, from the mover's side, never below zero. When the move played is the engine's first choice, CPL is set to 0: any difference there is search noise between two evaluations, not a loss by the player (the unadjusted value is kept in the `cpl_raw` column; in the series this applies to 444 moves, of which 207 had a raw difference above 0 and 65 above 10). Best: CPL up to 10. Good: up to 50. Inaccuracy: up to 100. Mistake: up to 300. Blunder: above 300. Opening: the first 20 half-moves. Endgame: 12 pieces or fewer.
 
 ## Watch the games
 
