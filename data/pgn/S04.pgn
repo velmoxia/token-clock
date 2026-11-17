@@ -1,0 +1,10 @@
+[Event "Velmoxia AI Chess Duel #1 (best of 11)"]
+[Site "API vs API, no engine"]
+[Date "2026.11.16"]
+[Round "S04"]
+[White "gpt-6.1-sol"]
+[Black "claude-sonnet-5-5"]
+[Result "1-0"]
+[Termination "checkmate"]
+
+1. e4 { [%tok 48] [%sec 2.8] } 1... c5 { [%tok 38] [%sec 1.6] } 2. Nf3 { [%tok 49] [%sec 4.1] } 2... d6 { [%tok 53] [%sec 1.3] } 3. d4 { [%tok 61] [%sec 5.5] } 3... cxd4 { [%tok 57] [%sec 1.2] } 4. Nxd4 { [%tok 50] [%sec 4.9] } 4... Nf6 { [%tok 53] [%sec 1.2] } 5. Nc3 { [%tok 63] [%sec 4.6] } 5... a6 { [%tok 48] [%sec 1.2] } 6. Be3 { [%tok 63] [%sec 5.3] } 6... e6 { [%tok 43] [%sec 1.1] } 7. f3 { [%tok 90] [%sec 6.2] } 7... b5 { [%tok 45] [%sec 1.1] } 8. Qd2 { [%tok 116] [%sec 5.0] } 8... Bb7 { [%tok 51] [%sec 1.2] } 9. O-O-O { [%tok 206] [%sec 6.2] } 9... Nbd7 { [%tok 147] [%sec 1.9] } 10. g4 { [%tok 214] [%sec 7.2] } 10... b4 { [%tok 665] [%sec 8.0] } 11. Na4 { [%tok 924] [%sec 27.4] } 11... Qa5 { [%tok 1133] [%sec 12.8] } 12. b3 { [%tok 1520] [%sec 41.5] } 12... Qc7 { [%tok 613] [%sec 6.3] } 13. g5 { [%tok 867] [%sec 26.2] } 13... Nh5 { [%tok 1036] [%sec 9.3] } 14. Bh3 { [%tok 1026] [%sec 31.6] } 14... Nb6 { [%tok 1009] [%sec 10.4] } 15. Nxb6 { [%tok 6118] [%sec 152.1] } 15... Qxb6 { [%tok 363] [%sec 4.6] } 16. Nxe6 { [%tok 3105] [%sec 78.5] } 16... fxe6 { [%tok 643] [%sec 6.7] } 17. Bxb6 { [%tok 1057] [%sec 32.8] } 17... Rc8 { [%tok 1102] [%sec 10.7] } 18. Kb1 { [%tok 1062] [%sec 36.3] } 18... Rc6 { [%tok 1480] [%sec 14.2] } 19. Qxb4 { [%tok 1753] [%sec 50.2] } 19... Rxb6 { [%tok 1254] [%sec 12.5] } 20. Qxb6 { [%tok 832] [%sec 25.8] } 20... Nf4 { [%tok 694] [%sec 6.8] } 21. Bxe6 { [%tok 3199] [%sec 89.2] } 21... Nxe6 { [%tok 799] [%sec 7.9] } 22. Qxb7 { [%tok 545] [%sec 20.9] } 22... Nc5 { [%tok 1251] [%sec 11.9] } 23. Qc8+ { [%tok 1494] [%sec 44.0] } 23... Kf7 { [%tok 689] [%sec 8.2] } 24. Qf5+ { [%tok 1274] [%sec 40.0] } 24... Kg8 { [%tok 601] [%sec 6.4] } 25. Qd5+ { [%tok 878] [%sec 27.1] } 25... Ne6 { [%tok 139] [%sec 2.4] } 26. Qxe6# { [%tok 69] [%sec 5.2] } 1-0

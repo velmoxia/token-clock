@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this data, please cite it as below."
+title: "Token Clock: output tokens and move quality in chess games between language models"
+authors:
+  - family-names: "Ramos Coelho"
+    given-names: "Bernardo"
+    affiliation: "Velmoxia"
+date-released: 2026-11-17
+url: "https://github.com/velmoxia/token-clock"
+license: CC-BY-4.0
