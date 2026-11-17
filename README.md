@@ -43,15 +43,21 @@ Series score: **GPT-6.1 Sol 9.5, Claude Sonnet 5.5 1.5** (one draw, one Claude w
 | Output tokens, whole series | 308,775 | 537,727 |
 | Output tokens per move, median | 629 | 772 |
 
+Centipawn loss is set to 0 for the 444 moves that matched the engine's first choice (in 207 of them the raw difference was above 0; raw values are in the `cpl_raw` column). Token counts are each provider's own and are only roughly comparable.
+
 ![Median output tokens by move quality](charts/tokens_by_move_quality.png)
 
 ![Average centipawn loss per game](charts/acpl_per_game.png)
 
 Three observations, stated carefully:
 
-1. **Between the two models, more tokens went with better play.** GPT produced about 74% more output and had the lower centipawn loss in 10 of the 11 games.
+1. **In this pair and this series, the model that produced more output also played better.** GPT produced about 74% more output tokens (by each provider's own count) and had the lower centipawn loss in 10 of the 11 games. With only two models this cannot be generalised: GPT may simply be the stronger player here and, separately, the more verbose one.
 2. **Within each model, it is the other way round.** The moves each model spent most tokens on were, on average, its worse ones. Rank correlation between tokens and centipawn loss: +0.40 for Claude (95% interval +0.32 to +0.48) and +0.31 for GPT (+0.21 to +0.40). **This is an association, not a cause: it is not evidence that thinking more makes a model play worse.** A plausible reading is that the models spend more where the position is hard, and hard positions produce more errors. This data cannot separate that from other explanations.
-3. **That within-model link is fragile.** It holds without the opening moves, but shrinks to +0.10 (Claude) and +0.22 (GPT) when only roughly balanced positions (within 2 pawns) are kept, and those are only about a fifth of the non-opening moves, because most games became one-sided early.
+3. **That within-model link comes mostly from one-sided positions.** It holds without the opening moves, but shrinks to +0.10 (Claude) and +0.22 (GPT) when only roughly balanced positions (within 2 pawns) are kept. Those are only about a fifth of the non-opening moves, because most games became one-sided early. Evidence that the models spend more on genuinely contested positions is weak.
+
+Other explanations this data cannot rule out: a model in a lost position may simply write more; the extra output may be justification after the choice rather than useful reasoning; and one model may be more verbose at the same setting regardless of move quality.
+
+**What this series cannot answer** is the central question, whether more reasoning buys better moves. Both models ran at a single effort level. That needs the same model at several effort levels, which is the design of the next series.
 
 Full tables: [RESULTS.md](RESULTS.md).
 
@@ -59,14 +65,15 @@ Full tables: [RESULTS.md](RESULTS.md).
 
 Read these before quoting any number.
 
-- **11 games, not 837 independent experiments.** Every game opened 1.e4 c5 2.Nf3 (Sicilian Defence); there are only 2 distinct move sequences after 10 half-moves and 6 after 20. Much of the opening play is therefore repeated, and the games are not a varied sample of chess positions.
+- **11 games, not 837 independent experiments.** Every game opened 1.e4 c5 2.Nf3 (Sicilian Defence); there are only 2 distinct move sequences after 10 half-moves and 6 after 20. A substantial share of the opening moves is therefore repetition, not independent sampling of chess positions.
 - **One series, two models, one day.** No repetition, so there is no estimate of how much the score would change on another run. The score says who won this series, not which model is stronger at chess.
-- **The legal moves were given to the models.** Zero illegal moves is therefore not evidence of board understanding.
+- **The legal moves were given to the models.** The absence of illegal moves is therefore uninformative, and part of the work a player normally does was removed.
 - **Tokens are not a common unit.** Each provider counts tokens with its own tokenizer and reports hidden reasoning in its own way. For GPT the reasoning tokens are reported separately; for Claude they are included in output tokens but not itemised. Comparisons of token counts between providers are approximate.
 - **"Same effort" is a label, not a measurement.** `high` is a setting each provider defines for itself.
 - **Model versions are whatever the APIs served on the day.** The model names returned by the APIs matched the ones requested in every call.
-- **Engine judgement has limits.** Stockfish at 1.5 million nodes per position is far stronger than either player, but centipawn loss is noisy in won or lost positions; scores are capped at 1000.
-- **Moves within a game are not independent.** Intervals are bootstrapped over whole games for that reason, and with 11 games they are wide.
+- **Engine judgement has limits.** Stockfish at 1.5 million nodes per position is far stronger than either player, but it is not a reference analysis, and the analysis was run once, so the stability of the classes across engine settings was not tested. Centipawn loss is noisy in won or lost positions and scores are capped at 1000: about 60% of the positions in the series were already beyond 2 pawns for one side and about 20% were at the cap, so much of the centipawn-loss signal comes from very unequal positions.
+- **Moves within a game are not independent.** Intervals are bootstrapped over whole games for that reason. With 11 games that share openings they are unstable and should not be read as precise; one or two unusual games (game 10, for example) move them.
+- **No baseline.** There is no weaker model, random-move player or second engine setting to compare against.
 - **The pilots are two single games** under different settings and an earlier referee version, without separate reasoning-token counts. They are included for completeness and support no conclusion.
 
 ## What is in the repository
