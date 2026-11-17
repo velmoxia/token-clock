@@ -8,6 +8,8 @@ Everything here is from one small experiment. It is published so that others can
 
 Status: first data release, November 2026. Independent work by [Velmoxia](https://velmoxia.com), a family studio in Lisbon. Not sponsored by, or affiliated with, any AI company.
 
+**Interactive page, with the charts and the full match video (English and Portuguese): https://velmoxia.com/token-clock/**
+
 ## What was done
 
 - Two models played chess against each other through their public APIs on 16 November 2026: **Claude Sonnet 5.5** (`claude-sonnet-5-5`, Anthropic) and **GPT-6.1 Sol** (`gpt-6.1-sol`, OpenAI).
@@ -107,6 +109,7 @@ Centipawn loss (CPL) is the engine evaluation before the move minus the evaluati
 ## Watch the games
 
 - Full match, shown on the Token Clock (each position stays on screen in proportion to the tokens spent on the next move): https://youtu.be/oJRv2H-NFMc
+- Interactive page with the charts and the results: https://velmoxia.com/token-clock/
 
 ## Next
 
