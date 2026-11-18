@@ -3,6 +3,7 @@ message: "If you use this data, please cite it as below."
 type: dataset
 title: "Token Clock: output tokens and move quality in chess games between language models"
 version: "1.0"
+doi: "10.5281/zenodo.24334761"
 date-released: 2026-11-18
 authors:
   - family-names: "Ramos Coelho"
