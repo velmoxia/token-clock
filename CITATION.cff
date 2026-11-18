@@ -1,10 +1,30 @@
 cff-version: 1.2.0
 message: "If you use this data, please cite it as below."
+type: dataset
 title: "Token Clock: output tokens and move quality in chess games between language models"
+version: "1.0"
+date-released: 2026-11-18
 authors:
   - family-names: "Ramos Coelho"
     given-names: "Bernardo"
     affiliation: "Velmoxia"
-date-released: 2026-11-17
-url: "https://github.com/velmoxia/token-clock"
+abstract: >-
+  Open data and analysis from one small experiment: 11 chess games, plus 2
+  pilot games, between Claude Sonnet 5.5 (Anthropic) and GPT-6.1 Sol (OpenAI),
+  played through each company's official API with the same reasoning effort
+  setting ("high") and no chess engine. For every move the data record the
+  output tokens reported by each company and a post-game Stockfish 17.1
+  evaluation (centipawn loss). The series compares two different models at
+  one effort level, so it does not test whether more reasoning gives better
+  moves; it provides a method (the Velmoxia Token Clock) and a first dataset.
+  Data and text under CC BY 4.0; code under MIT.
+keywords:
+  - chess
+  - large language models
+  - reasoning tokens
+  - Stockfish
+  - open data
+  - Token Clock
+url: "https://velmoxia.com/token-clock/"
+repository-code: "https://github.com/velmoxia/token-clock"
 license: CC-BY-4.0
