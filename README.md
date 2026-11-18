@@ -89,7 +89,7 @@ Read these before quoting any number.
 | `analysis/stats.py` | Produces `RESULTS.md` |
 | `analysis/charts.py` | Produces the charts |
 
-Not yet included: the referee script and the raw request and response logs (JSONL). Both will be added after clean-up. The SHA-256 of each original log is already in `games.json`, so later publication can be checked against it.
+Not published at this stage: the referee script and the raw request and response logs (JSONL). The protocol above (prompts, rules and settings) is complete enough to repeat the experiment with your own referee. The SHA-256 of each original log is already in `games.json`, so any later publication can be checked against it.
 
 ### Reproduce
 
@@ -126,4 +126,6 @@ The method description "Watching AI games in tokens: the Velmoxia Token Clock me
 
 AI use: the referee, the analysis code and this text were written with the help of Claude (Anthropic), directed and checked by Bernardo Ramos Coelho.
 
-Contact: velmoxia@gmail.com
+## Collaborate
+
+Want to run a series with other models or effort levels, compare it with your own referee, or work with us on the next series? Write to velmoxia@gmail.com.
