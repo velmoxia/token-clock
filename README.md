@@ -1,5 +1,7 @@
 # Token Clock
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24334761.svg)](https://doi.org/10.5281/zenodo.24334761)
+
 **How much does a language model "think" before each chess move, and does thinking more give better moves?**
 
 This repository holds the open data and analysis behind the Velmoxia Token Clock: a way of watching and measuring games between AI models in which the clock is not seconds but **output tokens**, the amount of text (visible and hidden reasoning) a model produces before it commits to a move.
@@ -120,7 +122,9 @@ A second series with more games per condition and several effort levels for the 
 - Data, text and charts: [Creative Commons Attribution 4.0](LICENSE-DATA) (CC BY 4.0). Use them freely, with credit.
 - Code: [MIT](LICENSE).
 
-Suggested credit: *Velmoxia Token Clock (2026), https://github.com/velmoxia/token-clock*
+Suggested citation: Ramos Coelho, B. (2026). *Token Clock: output tokens and move quality in chess games between language models* (v1.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.24334762
+
+To cite all versions (it always points to the latest), use https://doi.org/10.5281/zenodo.24334761.
 
 The method description "Watching AI games in tokens: the Velmoxia Token Clock method" was registered at Safe Creative on 16 November 2026, no. 2611167664530. The registration records authorship and date; it does not restrict use of this data.
 
